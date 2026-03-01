@@ -6,36 +6,27 @@ Batch-generate Midjourney/Niji Journey images through an agent workflow.
 
 ## 1. Install (Most Important)
 
-### Recommended: npm / npx (one command)
+### Recommended now: git clone (one command)
 
 Install to Codex:
 
 ```bash
-npx midjourney-batch-oss@latest install --target codex
+git clone https://github.com/selaph/midjourney-batch-oss.git ~/.codex/skills/midjourney-batch
 ```
 
 Install to Claude Code:
 
 ```bash
-npx midjourney-batch-oss@latest install --target claude
+git clone https://github.com/selaph/midjourney-batch-oss.git ~/.claude/skills/midjourney-batch
 ```
 
 After install, restart your CLI session.
 
-### Fallback: manual copy (if npm package is not available yet)
-
-Codex:
+### npm / npx installer (available after npm publish)
 
 ```bash
-mkdir -p ~/.codex/skills
-cp -R <this-repo-path> ~/.codex/skills/midjourney-batch
-```
-
-Claude Code:
-
-```bash
-mkdir -p ~/.claude/skills
-cp -R <this-repo-path> ~/.claude/skills/midjourney-batch
+npx midjourney-batch-oss@latest install --target codex
+npx midjourney-batch-oss@latest install --target claude
 ```
 
 ## 2. Fastest Usage (Talk to Agent Naturally)

@@ -6,36 +6,27 @@
 
 ## 1. 安装（最重要）
 
-### 推荐：npm / npx 一行安装
+### 当前推荐：git clone 一行安装
 
 安装到 Codex：
 
 ```bash
-npx midjourney-batch-oss@latest install --target codex
+git clone https://github.com/selaph/midjourney-batch-oss.git ~/.codex/skills/midjourney-batch
 ```
 
 安装到 Claude Code：
 
 ```bash
-npx midjourney-batch-oss@latest install --target claude
+git clone https://github.com/selaph/midjourney-batch-oss.git ~/.claude/skills/midjourney-batch
 ```
 
 安装后重启 CLI 会话。
 
-### 备用：手动复制（尚未发布 npm 包时）
-
-Codex：
+### npm / npx 安装器（npm 发布后可用）
 
 ```bash
-mkdir -p ~/.codex/skills
-cp -R <本仓库路径> ~/.codex/skills/midjourney-batch
-```
-
-Claude Code：
-
-```bash
-mkdir -p ~/.claude/skills
-cp -R <本仓库路径> ~/.claude/skills/midjourney-batch
+npx midjourney-batch-oss@latest install --target codex
+npx midjourney-batch-oss@latest install --target claude
 ```
 
 ## 2. 最简单用法（直接和 Agent 说话）
