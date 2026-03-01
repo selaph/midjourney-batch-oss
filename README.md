@@ -1,5 +1,7 @@
 # Midjourney Batch Automation Skill
 
+[English](./README.md) | [简体中文](./README.zh-CN.md)
+
 Chrome CDP based automation for Midjourney/Niji Journey batch prompt execution.
 
 This fork is designed to be portable and open-source friendly:
@@ -21,7 +23,6 @@ This fork is designed to be portable and open-source friendly:
 
 - `SKILL.md`: agent-facing skill instructions
 - `references/workflow.md`: troubleshooting and workflow notes
-- `scripts/mj-browser.ts`: CLI entrypoint
 - `scripts/run-mj.js`: runtime launcher (auto bun/node)
 - `scripts/mj-browser.ts`: CLI logic
 - `scripts/mj-selectors.ts`: selector discovery and page probing
