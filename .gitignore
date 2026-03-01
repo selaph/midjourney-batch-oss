@@ -1,0 +1,7 @@
+.selector-cache.json
+.mj-browser-config.json
+.cdp-port
+runs/
+output/
+*.pid
+*.log
