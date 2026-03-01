@@ -1,0 +1,21 @@
+{
+  "name": "midjourney-batch-oss",
+  "version": "0.1.0",
+  "description": "Skill installer and runtime for Midjourney/Niji Journey batch automation",
+  "license": "MIT",
+  "bin": {
+    "midjourney-batch-oss": "scripts/install-skill.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "files": [
+    "SKILL.md",
+    "README.md",
+    "README.zh-CN.md",
+    "LICENSE",
+    "examples",
+    "references",
+    "scripts"
+  ]
+}

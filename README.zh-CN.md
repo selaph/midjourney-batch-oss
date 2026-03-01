@@ -6,43 +6,37 @@
 
 ## 1. 安装（最重要）
 
-这个仓库本质上是一个本地 skill 目录。你需要把它复制到 Agent 的 `skills` 目录下。
+### 推荐：npm / npx 一行安装
 
-### 方案 A：Codex CLI
+安装到 Codex：
 
-Windows（PowerShell）：
-
-```powershell
-$skillHome = "$env:USERPROFILE\.codex\skills\midjourney-batch"
-New-Item -ItemType Directory -Force -Path "$env:USERPROFILE\.codex\skills" | Out-Null
-Copy-Item -Recurse -Force "<本仓库路径>" $skillHome
+```bash
+npx midjourney-batch-oss@latest install --target codex
 ```
 
-macOS/Linux：
+安装到 Claude Code：
+
+```bash
+npx midjourney-batch-oss@latest install --target claude
+```
+
+安装后重启 CLI 会话。
+
+### 备用：手动复制（尚未发布 npm 包时）
+
+Codex：
 
 ```bash
 mkdir -p ~/.codex/skills
 cp -R <本仓库路径> ~/.codex/skills/midjourney-batch
 ```
 
-### 方案 B：Claude Code
-
-Windows（PowerShell）：
-
-```powershell
-$skillHome = "$env:USERPROFILE\.claude\skills\midjourney-batch"
-New-Item -ItemType Directory -Force -Path "$env:USERPROFILE\.claude\skills" | Out-Null
-Copy-Item -Recurse -Force "<本仓库路径>" $skillHome
-```
-
-macOS/Linux：
+Claude Code：
 
 ```bash
 mkdir -p ~/.claude/skills
 cp -R <本仓库路径> ~/.claude/skills/midjourney-batch
 ```
-
-复制完成后，重启 CLI 会话。
 
 ## 2. 最简单用法（直接和 Agent 说话）
 
@@ -97,6 +91,7 @@ node scripts/run-mj.js --download-only --experimental-download --output "<output
 
 - `SKILL.md`: Agent 使用说明
 - `references/workflow.md`: 工作流与故障排查
+- `scripts/install-skill.js`: npm 安装入口（`npx ... install`）
 - `scripts/run-mj.js`: 统一启动入口（自动 bun/node）
 - `scripts/mj-browser.ts`: CLI 主逻辑
 - `scripts/mj-selectors.ts`: 选择器发现与页面探测

@@ -6,43 +6,37 @@ Batch-generate Midjourney/Niji Journey images through an agent workflow.
 
 ## 1. Install (Most Important)
 
-This repository is a local skill folder. Install it into your agent's `skills` directory.
+### Recommended: npm / npx (one command)
 
-### Option A: Codex CLI
+Install to Codex:
 
-Windows (PowerShell):
-
-```powershell
-$skillHome = "$env:USERPROFILE\.codex\skills\midjourney-batch"
-New-Item -ItemType Directory -Force -Path "$env:USERPROFILE\.codex\skills" | Out-Null
-Copy-Item -Recurse -Force "<this-repo-path>" $skillHome
+```bash
+npx midjourney-batch-oss@latest install --target codex
 ```
 
-macOS/Linux:
+Install to Claude Code:
+
+```bash
+npx midjourney-batch-oss@latest install --target claude
+```
+
+After install, restart your CLI session.
+
+### Fallback: manual copy (if npm package is not available yet)
+
+Codex:
 
 ```bash
 mkdir -p ~/.codex/skills
 cp -R <this-repo-path> ~/.codex/skills/midjourney-batch
 ```
 
-### Option B: Claude Code
-
-Windows (PowerShell):
-
-```powershell
-$skillHome = "$env:USERPROFILE\.claude\skills\midjourney-batch"
-New-Item -ItemType Directory -Force -Path "$env:USERPROFILE\.claude\skills" | Out-Null
-Copy-Item -Recurse -Force "<this-repo-path>" $skillHome
-```
-
-macOS/Linux:
+Claude Code:
 
 ```bash
 mkdir -p ~/.claude/skills
 cp -R <this-repo-path> ~/.claude/skills/midjourney-batch
 ```
-
-After copying, restart your CLI session.
 
 ## 2. Fastest Usage (Talk to Agent Naturally)
 
@@ -97,6 +91,7 @@ node scripts/run-mj.js --download-only --experimental-download --output "<output
 
 - `SKILL.md`: agent-facing skill instructions
 - `references/workflow.md`: troubleshooting notes
+- `scripts/install-skill.js`: npm installer entry (`npx ... install`)
 - `scripts/run-mj.js`: runtime launcher (auto bun/node)
 - `scripts/mj-browser.ts`: CLI logic
 - `scripts/mj-selectors.ts`: selector discovery
