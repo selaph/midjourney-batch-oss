@@ -22,13 +22,6 @@ git clone https://github.com/selaph/midjourney-batch-oss.git ~/.claude/skills/mi
 
 安装后重启 CLI 会话。
 
-### npm / npx 安装器（npm 发布后可用）
-
-```bash
-npx midjourney-batch-oss@latest install --target codex
-npx midjourney-batch-oss@latest install --target claude
-```
-
 ## 2. 最简单用法（直接和 Agent 说话）
 
 在聊天里直接描述需求，Agent 应该会自动调用这个 skill。
@@ -82,7 +75,7 @@ node scripts/run-mj.js --download-only --experimental-download --output "<output
 
 - `SKILL.md`: Agent 使用说明
 - `references/workflow.md`: 工作流与故障排查
-- `scripts/install-skill.js`: npm 安装入口（`npx ... install`）
+- `scripts/install-skill.js`: 可选安装入口
 - `scripts/run-mj.js`: 统一启动入口（自动 bun/node）
 - `scripts/mj-browser.ts`: CLI 主逻辑
 - `scripts/mj-selectors.ts`: 选择器发现与页面探测

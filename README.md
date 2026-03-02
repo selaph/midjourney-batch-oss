@@ -22,13 +22,6 @@ git clone https://github.com/selaph/midjourney-batch-oss.git ~/.claude/skills/mi
 
 After install, restart your CLI session.
 
-### npm / npx installer (available after npm publish)
-
-```bash
-npx midjourney-batch-oss@latest install --target codex
-npx midjourney-batch-oss@latest install --target claude
-```
-
 ## 2. Fastest Usage (Talk to Agent Naturally)
 
 In chat, just describe what you want. The agent should automatically use this skill.
@@ -82,7 +75,7 @@ node scripts/run-mj.js --download-only --experimental-download --output "<output
 
 - `SKILL.md`: agent-facing skill instructions
 - `references/workflow.md`: troubleshooting notes
-- `scripts/install-skill.js`: npm installer entry (`npx ... install`)
+- `scripts/install-skill.js`: optional installer entrypoint
 - `scripts/run-mj.js`: runtime launcher (auto bun/node)
 - `scripts/mj-browser.ts`: CLI logic
 - `scripts/mj-selectors.ts`: selector discovery
